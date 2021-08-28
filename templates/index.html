@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href={{ url_for( 'static', filename="css/cool_button.css" ) }}>
+    <link rel="stylesheet" type="text/css" href={{ url_for( 'static', filename="css/select.css" ) }}>
+    <script src="{{ url_for('static', filename='js/jquery-1.11.3.js') }}" type="text/javascript"></script>
+</head>
+
+
+<body>
+
+    <div>
+        <center>
+            <h1 style="font-size: 5vw; color: #6f6;">&nbsp;ROVER M3 Control Panel&nbsp;</h1>
+        </center>
+    </div>
+
+    <div id="main_menu">
+        <center>
+            <button type="button" class="button pulseBox" id="slam_btn">SLAM</button>
+            <button type="button" class="button pulseBox" id="navigation_btn">Navigation</button>
+        </center>
+    </div>
+
+    <div id="map_slection_menu">
+        <center>
+            <div class="select">
+                <select id="map_list"></select>
+            </div>
+            <button type="button" class="button pulseBox" id="start_navigation_btn">Start Navigation</button>
+        </center>
+    </div>
+
+    <div id="edc_menu">
+        <center>
+            <button type="button" class="button pulseBox" id="start_auto_collection_btn">Start Auto Collection</button>
+            <button type="button" class="button pulseBox" id="stop_auto_collection_btn">Stop Auto Collection</button>
+            <input type="text" class="button pulseBox" id="map_name_input" placeholder="Name Your Data Here" />
+            <button type="button" class="button pulseBox" id="save_data_btn">Save Data</button>
+        </center>
+    </div>
+
+    <div id="exit_menu">
+        <center>
+            <button type="button" class="button3 pulseBox" id="exit_btn">Exit</button>
+        </center>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/button_action.js') }}" type="text/javascript"></script>
+    <script src="{{ url_for('static', filename='js/sync_status.js') }}" type="text/javascript"></script>
+
+</body>
+
+</html>
